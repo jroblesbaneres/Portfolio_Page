@@ -223,6 +223,13 @@ footer div {
 
 }
 
+section nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 15px;
+    text-shadow: none;
+}
+
 
 .step-text h4 {
     font-size: 26px;
@@ -246,7 +253,7 @@ footer div {
 }
 
 .step-img img {
-    max-width: 100%;
+    max-width: 50%;
 }
 
 .step-text {
