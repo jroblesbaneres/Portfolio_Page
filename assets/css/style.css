@@ -15,6 +15,16 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+/* TEST */
+
+.table_define {
+    border: 1px solid black;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
 
 /* HEADER */
 header {
@@ -116,68 +126,6 @@ footer div {
 }
 
 
-.checkbox-wrapper label, .radio-wrapper label {
-    position: relative;
-    left: 10px;
-    margin: 10px;
-    line-height: 1.6;
-}
-
-.checkbox-wrapper input, .radio-wrapper input {
-    opacity: 0;
-}
-
-.checkbox-wrapper label::before, .radio-wrapper label::before {
-    content: "";
-    height: 20px;
-    width: 20px;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid var(--secondary-color);
-    position: absolute;
-    top: -4px;
-    left: -30px;
-}
-
-.radio-wrapper label::before {
-    border-radius: 50%;
-}
-
-.radio-wrapper label::after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--secondary-color);
-    position: absolute;
-    left: -29px;
-    top: -3px;
-    background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
-}
-
-.checkbox-wrapper label::after {
-    content: "";
-    height: 6px;
-    width: 14px;
-    border-left: 2px solid var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
-    position:absolute;
-    left: -26px;
-    top: 1px;
-    transform: rotate(-58deg);
-}
-
-.checkbox-wrapper input + label::after, .radio-wrapper input + label::after {
-    content: none;
-}
-
-.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after {
-    content: "";
-}
-
-
-
-
-
 .step {
     margin: 50px auto;
     padding-bottom: 10px;
@@ -248,22 +196,14 @@ section nav ul li a:hover {
 }
 
 .step-img {
-    flex: 1 12%;
-    margin-right: 20px;
-}
-
-.step-img img {
-    max-width: 50%;
+    flex: 12%;
+    margin-right: 0px;
+    padding-left: 3%;
 }
 
 .step-text {
     flex: 12;
 }
-
-.flex-row {
-    display: flex;
-}
-
 
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
@@ -289,7 +229,7 @@ section nav ul li a:hover {
        font-size: 20px;
    }
 
-   footer h2, footer div {
+   footer div {
        text-align: center;
        width: 100%;
    }
@@ -299,13 +239,6 @@ section nav ul li a:hover {
        width: 80%;
    }
 
-   .trainer {
-       flex: 0 70%;
-   }
-
-   .contact-info iframe {
-       flex: 1 100%;
-   }
 }
 
 /*MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -349,19 +282,8 @@ section nav ul li a:hover {
         width: 100%;
     }
 
-    .trainer {
-        flex: 0 100%;
-    }
-
-    .contact-info {
-        text-align: center;
-    }
 
     .contact-info > * {
         flex: 0 100%;
-    }
-
-    .contact-form {
-        order: 3;
     }
 }
